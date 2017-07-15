@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('frontend.pages.index');
 });
+Route::get('admin/index', function () {
+    return view('admin.pages.index');
+});
