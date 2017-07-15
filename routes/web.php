@@ -16,4 +16,10 @@ Route::get('/', function () {
 });
 Route::get('admin/index', function () {
     return view('admin.pages.index');
+})->name('admin.index');
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('login', 'Admin\LoginController@index')->name('admin.login');
+    Route::post('login', 'Admin\LoginController@login')->name('admin.login');
+    Route::get('logout', 'Admin\LoginController@logout')->name('admin.logout');
 });

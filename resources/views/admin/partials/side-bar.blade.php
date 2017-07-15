@@ -13,7 +13,7 @@
 								</div>
 								<div class="tabular-cell welcome-options">
 									<span class="welcome-text">Welcome,</span>
-									<a href="#" class="name">Alexander Smith</a>
+									<a href="#" class="name">{{$userlogin->email}}</a>
 								</div>
 							</div>
 						</div>
