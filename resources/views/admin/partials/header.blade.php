@@ -409,10 +409,9 @@
 
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle username" data-toggle="dropdown">
-				<span class="hidden-xs">Alexander Smith</span>
-				<img class="img-circle" src="assets/demo/avatar/avatar_06.png" alt="Dangerfield" />
-
+				<span class="hidden-xs">{{$userlogin->email}}</span>
 			</a>
+
 			<ul class="dropdown-menu userinfo">
 				<li><a href="#"><span class="pull-left">Edit Profile</span> <i class="pull-right fa fa-pencil"></i></a></li>
 				<li><a href="#"><span class="pull-left">Account Settings</span> <i class="pull-right fa fa-cogs"></i></a></li>
@@ -422,7 +421,8 @@
 				<li><a href="#"><span class="pull-left">Statement</span> <i class="pull-right fa fa-file-o"></i></a></li>
 				<li><a href="#"><span class="pull-left">Withdrawals</span> <i class="pull-right fa fa-credit-card"></i></a></li>
 				<li class="divider"></li>
-				<li><a href="#"><span class="pull-left">Sign Out</span> <i class="pull-right fa fa-sign-out"></i></a></li>
+				<li><a href="{{ route('admin.logout') }}"><span class="pull-left">Sign Out</span> <i class="pull-right fa fa-sign-out"></i></a>
+				</li>
 			</ul>
 		</li>
 	</ul>
