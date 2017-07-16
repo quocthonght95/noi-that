@@ -15,7 +15,6 @@ class Relations extends Migration
     {
         Schema::table('products', function(Blueprint $table){
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('image_id')->references('id')->on('images');
         });
 
         Schema::table('bill_details', function(Blueprint $table){
@@ -26,6 +25,9 @@ class Relations extends Migration
         Schema::table('bills', function(Blueprint $table){
             $table->foreign('status_id')->references('id')->on('status');
             $table->foreign('payment_id')->references('id')->on('payments');
+        });
+        Schema::table('images', function(Blueprint $table){
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 

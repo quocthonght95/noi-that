@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
-            $table->longText('desciption')->nullable();
+            $table->longText('description')->nullable();
             $table->integer('unit_price')->unsigned();
             $table->integer('discount')->unsigned();
             $table->string('image');
@@ -28,7 +28,6 @@ class CreateProductsTable extends Migration
             $table->string('hot');
             $table->boolean('is_hidden')->default(0);
             $table->integer('category_id')->unsigned();
-            $table->integer('image_id')->unsigned();
             $table->timestamps();
         });
     }

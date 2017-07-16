@@ -373,9 +373,9 @@ a.block-currency:focus {
 }
 .toplinks div.links .phone {
 	font-weight: bold;
-	font-size: 11px;
+	font-size: 18px;
 	margin-left: 20px;
-	color: #a6a6a6;
+	color: red;
 }
 .toplinks div.links .phone:before {
 	content: "\f095";
