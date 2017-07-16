@@ -8,29 +8,15 @@
               <ul class="dropdown-menu" role="menu">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="frontend/images/english.png" alt="language"> English </a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="frontend/images/francais.png" alt="language"> French </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="frontend/images/german.png" alt="language"> German </a></li>
               </ul>
             </div>
             <!-- End Header Language --> 
-            <!-- Header Currency -->
-            <div class="dropdown block-currency-wrapper"> <a role="button" data-toggle="dropdown" data-target="#" class="block-currency dropdown-toggle" href="#"> USD <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> $ - Dollar </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> £ - Pound </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> € - Euro </a></li>
-              </ul>
-            </div>
-            <!-- End Header Currency -->
-            <div class="welcome-msg hidden-xs"> Default welcome msg! </div>
           </div>
           <div class="col-xs-6"> 
             <!-- Header Top Links -->
             <div class="toplinks">
               <div class="links">
-                <div class="myaccount"><a title="My Account" href="login.html"><span class="hidden-xs">My Account</span></a></div>
-                <div class="wishlist"><a title="My Wishlist" href="wishlist.html"><span class="hidden-xs">Wishlist</span></a></div>
-                <div class="check"><a title="Checkout" href="checkout.html"><span class="hidden-xs">Checkout</span></a></div>
-                <div class="phone hidden-xs">1 800 123 1234</div>
+                <div class="phone hidden-xs">01639.27.72.72</div>
               </div>
             </div>
             <!-- End Header Top Links --> 
@@ -53,17 +39,6 @@
                 <option value="0">All Categories</option>
                 <option value="36">Camera</option>
                 <option value="37">Electronics</option>
-                <option value="42">&nbsp;&nbsp;&nbsp;Cell Phones</option>
-                <option value="43">&nbsp;&nbsp;&nbsp;Cameras</option>
-                <option value="44">&nbsp;&nbsp;&nbsp;Laptops</option>
-                <option value="45">&nbsp;&nbsp;&nbsp;Hard Drives</option>
-                <option value="46">&nbsp;&nbsp;&nbsp;Monitors</option>
-                <option value="47">&nbsp;&nbsp;&nbsp;Mouse</option>
-                <option value="48">&nbsp;&nbsp;&nbsp;Digital Cameras</option>
-                <option value="38">Desktops</option>
-                <option value="39">Computer Parts</option>
-                <option value="40">Televisions</option>
-                <option value="41">Featured</option>
               </select>
               <input type="text" placeholder="Search here..." value="" maxlength="70" class="" name="search" id="search">
               <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
@@ -76,7 +51,7 @@
           <div class="top-cart-contain">
             <div class="mini-cart">
               <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> <a href="shopping_cart.html"> <i class="icon-cart"></i>
-                <div class="cart-box"><span class="title">My Cart</span><span id="cart-total"> 2 </span></div>
+                <div class="cart-box"><span class="title">Giỏ hàng</span><span id="cart-total"> 2 </span></div>
                 </a></div>
               <div>
                 <div class="top-cart-content arrow_box">
@@ -101,8 +76,8 @@
                   </ul>
                   <div class="top-subtotal">Subtotal: <span class="price">$420.00</span></div>
                   <div class="actions">
-                    <button class="btn-checkout" type="button"><span>Checkout</span></button>
-                    <button class="view-cart" type="button"><span>View Cart</span></button>
+                    <button class="btn-checkout" type="button"><span>Mua hàng</span></button>
+                    <button class="view-cart" type="button"><span>Giỏ hàng</span></button>
                   </div>
                 </div>
               </div>
@@ -114,11 +89,10 @@
               <input class="title_shopping_cart" value="Go to shopping cart" type="hidden">
             </div>
           </div>
-          <div class="signup"><a title="Login" href="login.html"><span>Sign up Now</span></a></div>
+          <div class="signup"><a title="Login" href="login.html"><span>Đăng ký</span></a></div>
           <span class="or"> | </span>
-          <div class="login"><a title="Login" href="login.html"><span>Log In</span></a></div>
+          <div class="login"><a title="Login" href="login.html"><span>Đăng nhập</span></a></div>
         </div>
-        <!-- End Top Cart --> 
       </div>
     </div>
   </header>
