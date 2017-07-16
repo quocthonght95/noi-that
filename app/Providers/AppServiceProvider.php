@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use Sentinel;
+use App\Models\Category;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,9 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('*', function($view) {
             $view->with('userlogin', Sentinel::getUser());
+        });
+        View::composer('*', function($view) {
+            $view->with('category', Category::All());
         });
     }
 

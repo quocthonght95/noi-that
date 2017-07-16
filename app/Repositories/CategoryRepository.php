@@ -11,4 +11,11 @@ class CategoryRepository extends BaseRepository
     {
     	$this->model = new Category;
     }
+
+    public function getSlug($slug)
+    {
+    	$query = $this->model->where('slug', $slug)->first();
+
+    	return $query;
+    }
 }

@@ -46,4 +46,11 @@ class ProductRepository extends BaseRepository
     		->orderBy('discount', 'DESC')->limit(3)->get();
     	return $query;
     }
+
+    public function getProductBySlug($get_slug)
+    {
+    	$query = $this->model->where('category_id', $get_slug->id)->get();
+
+    	return $query;
+    }
 }

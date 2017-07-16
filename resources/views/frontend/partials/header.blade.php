@@ -4,10 +4,10 @@
         <div class="row"> 
           <!-- Header Language -->
           <div class="col-xs-6">
-            <div class="dropdown block-language-wrapper"> <a role="button" data-toggle="dropdown" data-target="#" class="block-language dropdown-toggle" href="#"> <img src="frontend/images/english.png" alt="language"> English <span class="caret"></span> </a>
+            <div class="dropdown block-language-wrapper"> <a role="button" data-toggle="dropdown" data-target="#" class="block-language dropdown-toggle" href="#"> <img src="/frontend/images/english.png" alt="language"> English <span class="caret"></span> </a>
               <ul class="dropdown-menu" role="menu">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="frontend/images/english.png" alt="language"> English </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="frontend/images/francais.png" alt="language"> French </a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="/frontend/images/english.png" alt="language"> English </a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="/frontend/images/francais.png" alt="language"> French </a></li>
               </ul>
             </div>
             <!-- End Header Language --> 
@@ -28,7 +28,7 @@
       <div class="row">
         <div class="col-lg-2 col-sm-3 col-md-2 col-xs-12"> 
           <!-- Header Logo --> 
-          <a class="logo" title="Magento Commerce" href="index.html"><img alt="Magento Commerce" src="frontend/images/logo.png"></a> 
+          <a class="logo" title="Magento Commerce" href="index.html"><img alt="Magento Commerce" src="/frontend/images/logo.png"></a> 
           <!-- End Header Logo --> 
         </div>
         <div class="col-lg-7 col-sm-4 col-md-6 col-xs-12"> 
@@ -57,7 +57,7 @@
                 <div class="top-cart-content arrow_box">
                   <div class="block-subtitle">Recently added item(s)</div>
                   <ul id="cart-sidebar" class="mini-products-list">
-                    <li class="item even"> <a class="product-image" href="#" title="Downloadable Product "><img alt="Downloadable Product " src="frontend/products-images/product1.jpg" width="80"></a>
+                    <li class="item even"> <a class="product-image" href="#" title="Downloadable Product "><img alt="Downloadable Product " src="/frontend/products-images/product1.jpg" width="80"></a>
                       <div class="detail-item">
                         <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
                           <p class="product-name"> <a href="#" title="Downloadable Product">Downloadable Product </a> </p>
@@ -65,7 +65,7 @@
                         <div class="product-details-bottom"> <span class="price">$100.00</span> <span class="title-desc">Qty:</span> <strong>1</strong> </div>
                       </div>
                     </li>
-                    <li class="item last odd"> <a class="product-image" href="#" title="  Sample Product "><img alt="  Sample Product " src="frontend/products-images/product11.jpg" width="80"></a>
+                    <li class="item last odd"> <a class="product-image" href="#" title="  Sample Product "><img alt="  Sample Product " src="/frontend/products-images/product11.jpg" width="80"></a>
                       <div class="detail-item">
                         <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
                           <p class="product-name"> <a href="#" title="  Sample Product "> Sample Product </a> </p>
