@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', 'Frontend\HomePageController@index');
+
 Route::get('admin/index', function () {
     return view('admin.pages.index');
 })->name('admin.index');
+Route::get('/', 'Frontend\HomePageController@index');
+Route::get('san-pham', 'Frontend\ProductController@index')->name('product');
+Route::get('san-pham/{slug}', 'Frontend\ProductController@getProductByCategory')->name('products');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('login', 'Admin\LoginController@index')->name('admin.login');

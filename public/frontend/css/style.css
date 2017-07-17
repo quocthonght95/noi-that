@@ -3289,13 +3289,9 @@ small {
 	font-weight: bold;
 	background: #ff6c00;
 	text-transform: uppercase;
+	text-align: center;
 }
-.side-nav-categories .block-title:before {
-	content: '\f0c9';
-	font-family: FontAwesome;
-	font-size: 14px;
-	margin-right: 3px
-}
+
 /* 14a. Category boxes */
 
 .box-category {

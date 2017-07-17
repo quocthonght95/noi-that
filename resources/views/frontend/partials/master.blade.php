@@ -19,12 +19,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- CSS Style -->
 
-<link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" type="text/css">
-<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" type="text/css">
-<link rel="stylesheet" href="{{ asset('frontend/css/revslider.css') }}" type="text/css">
-<link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}" type="text/css">
-<link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.css') }}" type="text/css">
-<link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('/frontend/css/revslider.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('/frontend/css/owl.theme.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('/frontend/css/font-awesome.css') }}" type="text/css">
 <!-- Google Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 </head>
@@ -54,12 +54,12 @@
 </div>
 
 <!-- JavaScript --> 
-<script type="text/javascript" src="frontend/js/jquery.min.js"></script> 
-<script type="text/javascript" src="frontend/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="{{ asset('/frontend/js/jquery.min.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('/frontend/js/bootstrap.min.js') }}"></script> 
  
-<script type="text/javascript" src="frontend/js/common.js"></script> 
-<script type="text/javascript" src="frontend/js/revslider.js"></script> 
-<script type="text/javascript" src="frontend/js/owl.carousel.min.js"></script> 
+<script type="text/javascript" src="{{ asset('/frontend/js/common.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('/frontend/js/revslider.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('/frontend/js/owl.carousel.min.js') }}"></script> 
 <script type='text/javascript'>
 jQuery(document).ready(function(){
 jQuery('#rev_slider_4').show().revolution({
