@@ -56,7 +56,8 @@
 <!-- JavaScript --> 
 <script type="text/javascript" src="{{ asset('/frontend/js/jquery.min.js') }}"></script> 
 <script type="text/javascript" src="{{ asset('/frontend/js/bootstrap.min.js') }}"></script> 
- 
+<script type="text/javascript" src="{{ asset('/frontend/js/jquery.jcarousel.min.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('/frontend/js/cloudzoom.js') }}"></script> 
 <script type="text/javascript" src="{{ asset('/frontend/js/common.js') }}"></script> 
 <script type="text/javascript" src="{{ asset('/frontend/js/revslider.js') }}"></script> 
 <script type="text/javascript" src="{{ asset('/frontend/js/owl.carousel.min.js') }}"></script> 

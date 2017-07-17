@@ -5,28 +5,28 @@
         <div id="brand-logo-slider" class="product-flexslider hidden-buttons">
           <div class="slider-items slider-width-col6"> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo1.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo1.png" alt="Image"></a> </div>
             <!-- End Item --> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo2.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo2.png" alt="Image"></a> </div>
             <!-- End Item --> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo3.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo3.png" alt="Image"></a> </div>
             <!-- End Item --> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo4.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo4.png" alt="Image"></a> </div>
             <!-- End Item --> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo5.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo5.png" alt="Image"></a> </div>
             <!-- End Item --> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo6.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo6.png" alt="Image"></a> </div>
             <!-- End Item --> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo1.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo1.png" alt="Image"></a> </div>
             <!-- End Item --> 
             <!-- Item -->
-            <div class="item"> <a href="#x"><img src="frontend/images/b-logo4.png" alt="Image"></a> </div>
+            <div class="item"> <a href="#x"><img src="/frontend/images/b-logo4.png" alt="Image"></a> </div>
             <!-- End Item --> 
           </div>
         </div>
@@ -35,13 +35,13 @@
   </div>
   <div class="footer-middle container">
     <div class="col-md-3 col-sm-4">
-      <div class="footer-logo"><a href="index.html" title="Logo"><img src="frontend/images/footer-logo.png" alt="logo"></a></div>
+      <div class="footer-logo"><a href="index.html" title="Logo"><img src="/frontend/images/footer-logo.png" alt="logo"></a></div>
       <p>Ngân hàng</p>
       <div class="payment-accept">
         <div>
-          <img src="frontend/images/payment-2.png" alt="payment">
-          <img src="frontend/images/payment-3.png" alt="payment">
-          <img src="frontend/images/payment-4.png" alt="payment">
+          <img src="/frontend/images/payment-2.png" alt="payment">
+          <img src="/frontend/images/payment-3.png" alt="payment">
+          <img src="/frontend/images/payment-4.png" alt="payment">
         </div>
       </div>
     </div>

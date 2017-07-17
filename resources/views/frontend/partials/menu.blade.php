@@ -12,7 +12,7 @@
               <ul style="display:none;" class="submenu">
                 <li>
                   <ul class="topnav">
-                    <li class="level0 nav-6 level-top first parent"> <a class="level-top" href="index.html">
+                    <li class="level0 nav-6 level-top first parent"> <a class="level-top" href="{{ route('home') }}">
                       <span>Trang chủ</span> </a>
                     </li>
                     @foreach($category as $c)
@@ -30,9 +30,9 @@
           <!--navmenu--> 
         </div>
         <!--End mobile-menu --> 
-        <a class="logo-small" title="Magento Commerce" href="index.html"><img alt="Magento Commerce" src="/frontend/images/logo-small.png"></a>
+        <a class="logo-small" title="Magento Commerce" href="{{ route('home') }}"><img alt="Magento Commerce" src="/frontend/images/logo-small.png"></a>
         <ul id="nav" class="hidden-xs">
-          <li class="level0 parent drop-menu"><a href="index.html" class="active"><span>Trang chủ</span> </a>
+          <li class="level0 parent drop-menu"><a href="{{ route('home') }}" class="active"><span>Trang chủ</span> </a>
           </li>
           @foreach($category as $v)
             <li class="level0 nav-6 level-top"> <a class="level-top" href="{{ route('products',$v->slug) }}">
@@ -45,32 +45,6 @@
           <li class="level0 nav-5 level-top first"> <a class="level-top" href="grid.html"> <span>Giới thiệu</span> </a>
           </li>
           <li class="level0 nav-5 level-top parent"><a href="grid.html"><span>Liên hệ </span> </a>
-          </li>
-          <li class="nav-custom-link level0 level-top parent"> <a class="level-top" href="#"><span>Custom</span></a>
-            <div class="level0-wrapper custom-menu" style="left: 0px; display: none;">
-              <div class="header-nav-dropdown-wrapper clearer">
-                <div class="grid12-5">
-                  <div class="custom_img"><a href="#"><img src="frontend/images/custom-img1.jpg" alt="custom img1"></a></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue.</p>
-                  <button class="learn_more_btn" title="Add to Cart" type="button"><span>Learn More</span></button>
-                </div>
-                <div class="grid12-5">
-                  <div class="custom_img"><a href="#"><img src="frontend/images/custom-img2.jpg" alt="custom img2"></a></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue.</p>
-                  <button class="learn_more_btn" title="Add to Cart" type="button"><span>Learn More</span></button>
-                </div>
-                <div class="grid12-5">
-                  <div class="custom_img"><a href="#"><img src="frontend/images/custom-img3.jpg" alt="custom img3"></a></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue.</p>
-                  <button class="learn_more_btn" title="Add to Cart" type="button"><span>Learn More</span></button>
-                </div>
-                <div class="grid12-5">
-                  <div class="custom_img"><a href="#"><img src="frontend/images/custom-img4.jpg" alt="custom img4"></a></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue.</p>
-                  <button class="learn_more_btn" title="Add to Cart" type="button"><span>Learn More</span></button>
-                </div>
-              </div>
-            </div>
           </li>
         </ul>
       </div>
