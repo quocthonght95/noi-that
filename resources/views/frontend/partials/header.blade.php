@@ -28,7 +28,7 @@
       <div class="row">
         <div class="col-lg-2 col-sm-3 col-md-2 col-xs-12"> 
           <!-- Header Logo --> 
-          <a class="logo" title="Magento Commerce" href="index.html"><img alt="Magento Commerce" src="/frontend/images/logo.png"></a> 
+          <a class="logo" title="Magento Commerce" href="{{ route('home') }}"><img alt="Magento Commerce" src="/frontend/images/logo.png"></a> 
           <!-- End Header Logo --> 
         </div>
         <div class="col-lg-7 col-sm-4 col-md-6 col-xs-12"> 
@@ -36,9 +36,9 @@
           <div class="search-box">
             <form action="http://htmldemo.magikcommerce.com/ecommerce/inspire-html-template/furniture/cat" method="POST" id="search_mini_form" name="Categories">
               <select name="category_id" class="cate-dropdown hidden-xs">
-                <option value="0">All Categories</option>
-                <option value="36">Camera</option>
-                <option value="37">Electronics</option>
+                <option value="0">Tất cả sản phẩm</option>
+                <option value="36">Sofa</option>
+                <option value="37">Bàn ghế</option>
               </select>
               <input type="text" placeholder="Search here..." value="" maxlength="70" class="" name="search" id="search">
               <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
@@ -51,33 +51,27 @@
           <div class="top-cart-contain">
             <div class="mini-cart">
               <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> <a href="shopping_cart.html"> <i class="icon-cart"></i>
-                <div class="cart-box"><span class="title">Giỏ hàng</span><span id="cart-total"> 2 </span></div>
+                <div class="cart-box"><span class="title">Giỏ hàng</span><span id="cart-total"> {{ $quantity }} </span></div>
                 </a></div>
               <div>
                 <div class="top-cart-content arrow_box">
-                  <div class="block-subtitle">Recently added item(s)</div>
+                  <div class="block-subtitle">Sản phẩm đã thêm</div>
                   <ul id="cart-sidebar" class="mini-products-list">
-                    <li class="item even"> <a class="product-image" href="#" title="Downloadable Product "><img alt="Downloadable Product " src="/frontend/products-images/product1.jpg" width="80"></a>
+                    @foreach($contents as $c)
+                    <li class="item even"> <a class="product-image" href="{{ route('product_detail', $c->slug) }}" title="{{ $c->name }}"><img src="photos/shares/products/{{ $c->options->img }}" width="80"></a>
                       <div class="detail-item">
                         <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
-                          <p class="product-name"> <a href="#" title="Downloadable Product">Downloadable Product </a> </p>
+                          <p class="product-name"> <a href="#" title="Downloadable Product">{{ $c->name }} </a> </p>
                         </div>
-                        <div class="product-details-bottom"> <span class="price">$100.00</span> <span class="title-desc">Qty:</span> <strong>1</strong> </div>
+                        <div class="product-details-bottom"> <span class="price">{{ number_format(round($c->price * (100- $c->discount)*0.01, -3)) }}đ</span> <span class="title-desc">Số lượng:</span> <strong>{{ $c->qty }}</strong> </div>
                       </div>
                     </li>
-                    <li class="item last odd"> <a class="product-image" href="#" title="  Sample Product "><img alt="  Sample Product " src="/frontend/products-images/product11.jpg" width="80"></a>
-                      <div class="detail-item">
-                        <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
-                          <p class="product-name"> <a href="#" title="  Sample Product "> Sample Product </a> </p>
-                        </div>
-                        <div class="product-details-bottom"> <span class="price">$320.00</span> <span class="title-desc">Qty:</span> <strong>2</strong> </div>
-                      </div>
-                    </li>
+                    @endforeach
                   </ul>
-                  <div class="top-subtotal">Subtotal: <span class="price">$420.00</span></div>
+                  <div class="top-subtotal">Tổng tiền: <span class="price">{{ number_format(round($totals, -3)) }} đ</span></div>
                   <div class="actions">
-                    <button class="btn-checkout" type="button"><span>Mua hàng</span></button>
-                    <button class="view-cart" type="button"><span>Giỏ hàng</span></button>
+                    <button class="btn-checkout" type="button"><span><a href="">Mua hàng</a></span></button>
+                    <button class="view-cart" type="button"><span><a href="{{ route('cart') }}">Giỏ hàng</a></span></button>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 @extends('frontend.partials.master')
+@section('title', $product_detail->name)
 @section('content')
 <div class="breadcrumbs">
 	<div class="container">

@@ -75,4 +75,10 @@ class ProductRepository extends BaseRepository
 
         return $query;
     }
+
+    public function productBuy($id)
+    {
+        $query = $this->model->where('id', $id)->first();
+        return $query;
+    }
 }

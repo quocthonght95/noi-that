@@ -1,4 +1,5 @@
 @extends('frontend.partials.master')
+@section('title', $get_slug->name)
 @section('content')
 <div class="breadcrumbs">
 	<div class="container">
@@ -85,11 +86,11 @@
 										<div class="actions">
 											<div class="actions-inner">
 												<button type="button" title="Thêm vào giỏ hàng" class="button btn-cart">
-													<span>+ Giỏ hàng</span>
+													<a href="{{ route('add_cart', $p->id) }}"><span>+ Giỏ hàng</span></a>
 												</button>
 												<ul class="add-to-links">
 													<li>
-														<a href="" title="Thêm vào yêu thích" class="link-wishlist">
+														<a title="Thêm vào yêu thích" class="link-wishlist">
 															<span>Yêu thích</span>
 														</a>
 													</li>
