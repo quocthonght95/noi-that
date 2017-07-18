@@ -53,4 +53,26 @@ class ProductRepository extends BaseRepository
 
     	return $query;
     }
+
+    public function getProductSlug($slug)
+    {
+        $query = $this->model->where('slug', $slug)->first();
+
+        return $query;
+    }
+
+    public function getProductDetail($slug)
+    {
+        $query = $this->model->where('slug', $slug)->first();
+
+        return $query;
+    }
+
+    public function getProductRelated($product_detail)
+    {
+        $query = $this->model
+        ->where('category_id', $product_detail->category_id)->limit(10)->get();
+
+        return $query;
+    }
 }

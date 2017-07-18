@@ -5,10 +5,10 @@
 		<div class="row">
 			<ul>
 				<li class="home">
-					<a href="index.html" title="Go to Home Page">Trang chủ</a><span>&mdash;›</span>
+					Trang chủ<span>&mdash;›</span>
 				</li>
 				<li class="">
-					<a href="grid.html" title="Go to Home Page">Sản phẩm</a><span>&mdash;›</span>
+					Sản phẩm<span>&mdash;›</span>
 				</li>
 				<li class="category13">
 					<strong>{{ $get_slug->name }}</strong>
@@ -78,7 +78,8 @@
 										<div class="sale-label sale-top-right">Sale</div>
 									@endif
 									<div class="images-container">
-										<a class="product-image" title="{{ $p->name }}" href="">
+										<a class="product-image" title="{{ $p->name }}"
+											href="{{ route('product_detail', $p->slug) }}">
 											<img src="../photos/shares/products/{{$p->image}}" class="img-responsive" alt="a" />
 										</a>
 										<div class="actions">
@@ -155,13 +156,13 @@
 							<div class="item">
 								<div class="item-area">
 									<div class="product-image-area">
-										<a href="#" class="product-image">
+										<a href="{{ route('product_detail', $ts->slug) }}" class="product-image">
 											<img src="../photos/shares/products/{{ $ts->image }}" alt="products images">
 										</a>
 									</div>
 									<div class="details-area">
 										<h2 class="product-name">
-											<a href="#">{{ $ts->name }}</a>
+											<a href="{{ route('product_detail', $ts->slug) }}">{{ $ts->name }}</a>
 										</h2>
 										<div class="ratings">
 											<div class="rating-box">
@@ -196,13 +197,13 @@
 							<div class="item">
 								<div class="item-area">
 									<div class="product-image-area">
-										<a href="#" class="product-image">
+										<a href="{{ route('product_detail', $ts->slug) }}" class="product-image">
 											<img src="../photos/shares/products/{{ $ts->image }}" alt="products images">
 										</a>
 									</div>
 									<div class="details-area">
 										<h2 class="product-name">
-											<a href="#">{{ $ts->name }}</a>
+											<a href="{{ route('product_detail', $ts->slug) }}">{{ $ts->name }}</a>
 										</h2>
 										<div class="ratings">
 											<div class="rating-box">

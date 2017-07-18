@@ -15,9 +15,10 @@
 Route::get('admin/index', function () {
     return view('admin.pages.index');
 })->name('admin.index');
-Route::get('/', 'Frontend\HomePageController@index');
+Route::get('/', 'Frontend\HomePageController@index')->name('home');
 Route::get('san-pham', 'Frontend\ProductController@index')->name('product');
 Route::get('san-pham/{slug}', 'Frontend\ProductController@getProductByCategory')->name('products');
+Route::get('chi-tiet-san-pham/{slug}', 'Frontend\ProductController@productDetail')->name('product_detail');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('login', 'Admin\LoginController@index')->name('admin.login');
