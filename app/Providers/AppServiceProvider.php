@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use Sentinel;
 use App\Models\Category;
+use Cart;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('*', function($view) {
             $view->with('category', Category::All());
+        });
+        View::composer('frontend.partials.header', function($view) {
+            $view->with('quantity', Cart::count());
+            $view->with('contents', Cart::content());
+            $view->with('totals', Cart::total());
         });
     }
 
