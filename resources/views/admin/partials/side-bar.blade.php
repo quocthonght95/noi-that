@@ -7,7 +7,7 @@
 						<div class="widget-body welcome-box tabular">
 							<div class="tabular-row">
 								<div class="tabular-cell welcome-avatar">
-									<a href="#"><img src="assets/demo/avatar/avatar_06.png" class="avatar"></a>
+									<a href="#"><img src="assets/demo/avatar/avatar_01.png" class="avatar"></a>
 								</div>
 								<div class="tabular-cell welcome-options">
 									<span class="welcome-text">Welcome,</span>
@@ -20,7 +20,7 @@
 						<span class="widget-heading">Explore</span>
 						<nav role="navigation" class="widget-body">
 							<ul class="acc-menu">
-								<li><a href="index-2.html"><i class="fa fa-home"></i><span>Dashboard</span><span class="badge badge-dark">1</span></a></li>
+								<li><a href="{{ route('admin.index') }}"><i class="fa fa-home"></i><span>Dashboard</span><span class="badge badge-dark">1</span></a></li>
 								<li><a href="javascript:;"><i class="fa fa-columns"></i><span>Manager Category</span><span class="badge badge-dark">23</span></a>
 									<ul class="acc-menu">
 										<li><a href="{{ route('admin.category.getCreate') }}">Add</a></li>

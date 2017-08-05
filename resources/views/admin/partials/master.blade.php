@@ -43,11 +43,6 @@
 </div>
 </div>
 </div>
-
-@include('admin.partials.side-left')
-
-
-@include('admin.partials.switch')
 <!-- Load site level scripts -->
 
 <script src="{{ asset('admin/assets/js/jquery-1.10.2.min.js') }}"></script> 							<!-- Load jQuery -->
