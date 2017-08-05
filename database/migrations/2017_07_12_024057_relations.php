@@ -14,20 +14,20 @@ class Relations extends Migration
     public function up()
     {
         Schema::table('products', function(Blueprint $table){
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
 
         Schema::table('bill_details', function(Blueprint $table){
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->foreign('bill_id')->references('id')->on('bills');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('bill_id')->references('id')->on('bills')->onDelete('cascade');
         });
 
         Schema::table('bills', function(Blueprint $table){
-            $table->foreign('status_id')->references('id')->on('status');
-            $table->foreign('payment_id')->references('id')->on('payments');
+            $table->foreign('status_id')->references('id')->on('status')->onDelete('cascade');
+            $table->foreign('payment_id')->references('id')->on('payments')->onDelete('cascade');
         });
         Schema::table('images', function(Blueprint $table){
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 

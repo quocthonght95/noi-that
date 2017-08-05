@@ -26,4 +26,13 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('login', 'Admin\LoginController@index')->name('admin.login');
     Route::post('login', 'Admin\LoginController@login')->name('admin.login');
     Route::get('logout', 'Admin\LoginController@logout')->name('admin.logout');
+
+    Route::group(['prefix' => 'category'], function() {
+        Route::get('add', 'Admin\CategoryController@getCreate')->name('admin.category.getCreate');
+        Route::post('add', 'Admin\CategoryController@postCreate')->name('admin.category.postCreate');
+        Route::get('show', 'Admin\CategoryController@show')->name('admin.category.show');
+        Route::get('edit/{slug}', 'Admin\CategoryController@getEdit')->name('admin.category.getEdit');
+        Route::post('edit/{id}', 'Admin\CategoryController@postEdit')->name('admin.category.postEdit');
+        Route::get('destroy/{slug}', 'Admin\CategoryController@destroy')->name('admin.category.destroy');
+    });
 });

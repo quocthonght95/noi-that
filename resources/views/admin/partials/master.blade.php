@@ -12,14 +12,14 @@
 	<meta name="description" content="Avalon Admin Theme">
 	<meta name="author" content="The Red Team">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="assets/fonts/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link href="assets/css/styles.css" type="text/css" rel="stylesheet">
-    <link href="assets/plugins/jstree/dist/themes/avalon/style.min.css" type="text/css" rel="stylesheet">
-    <link href="assets/plugins/codeprettifier/prettify.css" type="text/css" rel="stylesheet">
-    <link href="assets/plugins/iCheck/skins/minimal/blue.css" type="text/css" rel="stylesheet">
-    <link href="assets/plugins/form-daterangepicker/daterangepicker-bs3.css" type="text/css" rel="stylesheet">
-    <link href="assets/plugins/switchery/switchery.css" type="text/css" rel="stylesheet"> 
-    <link href="assets/plugins/fullcalendar/fullcalendar.css" type="text/css" rel="stylesheet">-->
+    <link href="{{ asset('admin/assets/fonts/font-awesome/css/font-awesome.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('admin/assets/css/styles.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('admin/assets/plugins/jstree/dist/themes/avalon/style.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('admin/assets/plugins/codeprettifier/prettify.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('admin/assets/plugins/iCheck/skins/minimal/blue.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('admin/assets/plugins/form-daterangepicker/daterangepicker-bs3.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('admin/assets/plugins/switchery/switchery.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('admin/assets/plugins/fullcalendar/fullcalendar.css') }}" type="text/css" rel="stylesheet">-->
 </head>
 
     <body class="infobar-offcanvas">
@@ -50,59 +50,60 @@
 @include('admin.partials.switch')
 <!-- Load site level scripts -->
 
-<script src="assets/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
-<script src="assets/js/jqueryui-1.9.2.min.js"></script> 							<!-- Load jQueryUI -->
-<script src="assets/js/bootstrap.min.js"></script> 								<!-- Load Bootstrap -->
+<script src="{{ asset('admin/assets/js/jquery-1.10.2.min.js') }}"></script> 							<!-- Load jQuery -->
+<script src="{{ asset('admin/assets/js/jqueryui-1.9.2.min.js') }}"></script> 							<!-- Load jQueryUI -->
+<script src="{{ asset('admin/assets/js/bootstrap.min.js') }}"></script> 								<!-- Load Bootstrap -->
 
-<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script> 	<!-- Slimscroll for custom scrolls -->
-<script src="assets/plugins/sparklines/jquery.sparklines.min.js"></script>  		<!-- Sparkline -->
-<script src="assets/plugins/jstree/dist/jstree.min.js"></script>  				<!-- jsTree -->
+<script src="{{ asset('admin/assets/plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script> 	<!-- Slimscroll for custom scrolls -->
+<script src="{{ asset('admin/assets/plugins/sparklines/jquery.sparklines.min.js') }}"></script>  		<!-- Sparkline -->
+<script src="{{ asset('admin/assets/plugins/jstree/dist/jstree.min.js') }}"></script>  				<!-- jsTree -->
 
-<script src="assets/plugins/codeprettifier/prettify.js"></script> 				<!-- Code Prettifier  -->
-<script src="assets/plugins/bootstrap-switch/bootstrap-switch.js"></script> 		<!-- Swith/Toggle Button -->
+<script src="{{ asset('admin/assets/plugins/codeprettifier/prettify.js') }}"></script> 				<!-- Code Prettifier  -->
+<script src="{{ asset('admin/assets/plugins/bootstrap-switch/bootstrap-switch.js') }}"></script> 		<!-- Swith/Toggle Button -->
 
-<script src="assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js"></script>  <!-- Bootstrap Tabdrop -->
+<script src="{{ asset('admin/assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js') }}"></script>  <!-- Bootstrap Tabdrop -->
 
-<script src="assets/plugins/iCheck/icheck.min.js"></script>     					<!-- iCheck -->
+<script src="{{ asset('admin/assets/plugins/iCheck/icheck.min.js') }}"></script>     					<!-- iCheck -->
 
-<script src="assets/js/enquire.min.js"></script> 										<!-- Enquire for Responsiveness -->
+<script src="{{ asset('admin/assets/js/enquire.min.js') }}"></script> 										<!-- Enquire for Responsiveness -->
 
-<script src="assets/plugins/bootbox/bootbox.js"></script>					<!-- BOOTBOX -->
+<script src="{{ asset('admin/assets/plugins/bootbox/bootbox.js') }}"></script>					<!-- BOOTBOX -->
 
-<script src="assets/js/application.js"></script>
-<script src="assets/demo/demo.js"></script>
-<script src="assets/demo/demo-switcher.js"></script>
+<script src="{{ asset('admin/assets/js/application.js') }}"></script>
+<script src="{{ asset('admin/assets/demo/demo.js') }}"></script>
+<script src="{{ asset('admin/assets/demo/demo-switcher.js') }}"></script>
 
-<script src="assets/plugins/simpleWeather/jquery.simpleWeather.min.js"></script> 
+<script src="{{ asset('admin/assets/plugins/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
 
 <!-- End loading site level scripts -->
 
 <!-- Load page level scripts-->
 
-<script src="assets/plugins/form-daterangepicker/daterangepicker.js"></script>     	<!-- Date Range Picker -->
-<script src="assets/plugins/form-daterangepicker/moment.min.js"></script>             <!-- Moment.js for Date Range Picker -->
+<script src="{{ asset('admin/assets/plugins/form-daterangepicker/daterangepicker.js') }}"></script>     	<!-- Date Range Picker -->
+<script src="{{ asset('admin/assets/plugins/form-daterangepicker/moment.min.js') }}"></script>             <!-- Moment.js for Date Range Picker -->
 
-<script src="assets/plugins/easypiechart/jquery.easypiechart.js"></script> 			<!-- EasyPieChart -->
-<script src="assets/plugins/powerwidgets/js/powerwidgets.js"></script> 				<!-- PowerWidgets -->
-<script src="assets/plugins/switchery/switchery.js"></script>     					<!-- Switchery -->
+<script src="{{ asset('admin/assets/plugins/easypiechart/jquery.easypiechart.js') }}"></script> 			<!-- EasyPieChart -->
+<script src="{{ asset('admin/assets/plugins/powerwidgets/js/powerwidgets.js') }}"></script> 				<!-- PowerWidgets -->
+<script src="{{ asset('admin/assets/plugins/switchery/switchery.js') }}"></script>     					<!-- Switchery -->
 
-<script src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>   			<!-- FullCalendar -->
+<script src="{{ asset('admin/assets/plugins/fullcalendar/fullcalendar.min.js') }}"></script>   			<!-- FullCalendar -->
 
 <!-- Charts -->
-<script src="assets/plugins/charts-flot/jquery.flot.min.js"></script>             	<!-- Flot Main File -->
-<script src="assets/plugins/charts-flot/jquery.flot.stack.min.js"></script>       	<!-- Flot Stacked Charts Plugin -->
-<script src="assets/plugins/charts-flot/jquery.flot.orderBars.min.js"></script>   	<!-- Flot Ordered Bars Plugin-->
-<script src="assets/plugins/charts-flot/jquery.flot.resize.min.js"></script>          <!-- Flot Responsive -->
-<script src="assets/plugins/charts-flot/jquery.flot.tooltip.min.js"></script> 		<!-- Flot Tooltips -->
+<script src="{{ asset('admin/assets/plugins/charts-flot/jquery.flot.min.js') }}"></script>             	<!-- Flot Main File -->
+<script src="{{ asset('admin/assets/plugins/charts-flot/jquery.flot.stack.min.js') }}"></script>       	<!-- Flot Stacked Charts Plugin -->
+<script src="{{ asset('admin/assets/plugins/charts-flot/jquery.flot.orderBars.min.js') }}"></script>   	<!-- Flot Ordered Bars Plugin-->
+<script src="{{ asset('admin/assets/plugins/charts-flot/jquery.flot.resize.min.js') }}"></script>          <!-- Flot Responsive -->
+<script src="{{ asset('admin/assets/plugins/charts-flot/jquery.flot.tooltip.min.js') }}"></script> 		<!-- Flot Tooltips -->
 
 <!-- Maps -->
-<script src="assets/plugins/jQuery-Mapael/js/raphael/raphael-min.js"></script>        <!-- Load Raphael as Dependency -->
-<script src="assets/plugins/jQuery-Mapael/js/jquery.mapael.js"></script>              <!-- jQuery Mapael -->
+<script src="{{ asset('admin/assets/plugins/jQuery-Mapael/js/raphael/raphael-min.js') }}"></script>        <!-- Load Raphael as Dependency -->
+<script src="{{ asset('admin/assets/plugins/jQuery-Mapael/js/jquery.mapael.js') }}"></script>              <!-- jQuery Mapael -->
 <!-- <script src="assets/plugins/jQuery-mousewheel/jquery.mousewheel.min.js"></script> -->     <!-- Mousewheel Support in zoomed-in maps -->
-<script src="assets/plugins/jQuery-Mapael/js/maps/world_countries.js"></script>       <!-- Vector Data of World Countries -->
+<script src="{{ asset('admin/assets/plugins/jQuery-Mapael/js/maps/world_countries.js') }}"></script>       <!-- Vector Data of World Countries -->
 
 
-<script src="assets/demo/demo-index.js"></script> 									<!-- Initialize scripts for this page-->
+<script src="{{ asset('admin/assets/js/admin.js') }}"></script>                                  <!-- Initialize scripts for this page-->
+<script src="{{ asset('admin/assets/demo/demo-index.js') }}"></script> 									<!-- Initialize scripts for this page-->
 
 <!-- End loading page level scripts-->
 

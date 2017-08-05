@@ -59,7 +59,7 @@ class BaseRepository
      */
     public function update($id, array $inputs)
     {
-        $this->getById($id)->update($inputs);
+        return $this->model->where('id', $id)->update($inputs);
     }
 
     /**
@@ -72,5 +72,16 @@ class BaseRepository
     public function destroy($id)
     {
         $this->getById($id)->delete();
+    }
+
+    public function getBySlug($slug)
+    {
+        return $this->model->where('slug', $slug)->first();
+    }
+
+    public function destroyBySlug($slug)
+    {
+        $model = $this->getBySlug($slug);
+        return $model->delete();
     }
 }
