@@ -25,7 +25,7 @@ class CreateProductsTable extends Migration
             $table->string('size');
             $table->string('guarantee');
             $table->string('material');
-            $table->string('hot');
+            $table->string('hot')->nullable();
             $table->boolean('is_hidden')->default(0);
             $table->integer('category_id')->unsigned();
             $table->timestamps();

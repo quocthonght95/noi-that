@@ -22,7 +22,7 @@ class BaseRepository
      */
     public function getPaginate($n)
     {
-        return $this->model->paginate($n);
+        return $this->model->orderBy('id', 'DESC')->paginate($n);
     }
 
     /**
@@ -83,5 +83,10 @@ class BaseRepository
     {
         $model = $this->getBySlug($slug);
         return $model->delete();
+    }
+
+    public function getAll()
+    {
+        return $this->model->all();
     }
 }
