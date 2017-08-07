@@ -128,7 +128,7 @@
 								<div id="productTabContent" class="tab-content">
 									<div class="tab-pane fade in active" id="product_tabs_description">
 										<div class="std">
-											{{ $product_detail->description }}
+                                        <?php echo(html_entity_decode($product_detail->description)); ?>
 										</div>
 									</div>
 									<div class="tab-pane fade" id="product_tabs_tags">
@@ -206,7 +206,7 @@
 																			@endif
 																		</div>
 																	</div>
-																	<!--item-content--> 
+																	<!--item-content-->
 																</div>
 																<!--info-inner-->
 																<div class="actions">

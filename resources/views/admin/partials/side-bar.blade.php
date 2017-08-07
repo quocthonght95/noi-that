@@ -27,6 +27,12 @@
 										<li><a href="{{ route('admin.category.show') }}">Show</a></li>
 									</ul>
 								</li>
+                                <li><a href="javascript:;"><i class="fa fa-columns"></i><span>Products</span><span class="badge badge-dark">23</span></a>
+                                    <ul class="acc-menu">
+                                        <li><a href="{{ route('admin.products.getCreate') }}">Add</a></li>
+                                        <li><a href="{{ route('admin.products.show') }}">Show</a></li>
+                                    </ul>
+                                </li>
 							</ul>
 						</nav>
 					</div>

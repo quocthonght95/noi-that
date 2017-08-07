@@ -35,4 +35,12 @@ Route::group(['prefix' => 'admin'], function() {
         Route::post('edit/{id}', 'Admin\CategoryController@postEdit')->name('admin.category.postEdit');
         Route::get('destroy/{slug}', 'Admin\CategoryController@destroy')->name('admin.category.destroy');
     });
+    Route::group(['prefix' => 'products'], function() {
+        Route::get('add', 'Admin\ProductController@getCreate')->name('admin.products.getCreate');
+        Route::post('add', 'Admin\ProductController@postCreate')->name('admin.products.postCreate');
+        Route::get('show', 'Admin\ProductController@show')->name('admin.products.show');
+        Route::get('edit/{slug}', 'Admin\ProductController@getEdit')->name('admin.products.getEdit');
+        Route::post('edit/{id}', 'Admin\ProductController@postEdit')->name('admin.products.postEdit');
+        Route::get('destroy/{slug}', 'Admin\ProductController@destroy')->name('admin.products.destroy');
+    });
 });

@@ -18,7 +18,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text,
                 'unit_price' => $faker->numberBetween($min = 500000,$max = 2000000),
                 'discount' => rand(0, 30),
-                'image' => 'amazon.jpg',
+                'image' => '/photos/product.jpg',
                 'note' => str_random(20),
                 'size' => $faker->name,
                 'guarantee' => $faker->name,

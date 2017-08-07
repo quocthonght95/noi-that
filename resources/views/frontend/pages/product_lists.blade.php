@@ -81,7 +81,7 @@
 									<div class="images-container">
 										<a class="product-image" title="{{ $p->name }}"
 											href="{{ route('product_detail', $p->slug) }}">
-											<img src="../photos/shares/products/{{$p->image}}" class="img-responsive" alt="a" />
+											<img src="{{$p->image}}" class="img-responsive" alt="a" />
 										</a>
 										<div class="actions">
 											<div class="actions-inner">
