@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bill extends Model
 {
+    protected $table = 'bills';
+    protected $fillable = ['date_order', 'total', 'note', 'status_id', 'payment_id'];
+
     public function Status()
     {
     	return $this->belongsTo(Status::class, 'status_id');

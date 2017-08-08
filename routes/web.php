@@ -21,6 +21,8 @@ Route::get('san-pham/{slug}', 'Frontend\ProductController@getProductByCategory')
 Route::get('chi-tiet-san-pham/{slug}', 'Frontend\ProductController@productDetail')->name('product_detail');
 Route::get('gio-hang', 'Frontend\CartController@index')->name('cart');
 Route::get('them-gio-hang/{id}', 'Frontend\CartController@addCart')->name('add_cart');
+Route::get('mua-hang', 'Frontend\CartController@getOrder')->name('getOrder');
+Route::post('mua-hang/{id}', 'Frontend\CartController@postOrder')->name('postOrder');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('login', 'Admin\LoginController@index')->name('admin.login');
