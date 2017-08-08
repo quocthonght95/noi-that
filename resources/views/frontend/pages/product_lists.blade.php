@@ -158,7 +158,7 @@
 								<div class="item-area">
 									<div class="product-image-area">
 										<a href="{{ route('product_detail', $ts->slug) }}" class="product-image">
-											<img src="../photos/shares/products/{{ $ts->image }}" alt="products images">
+											<img src="{{ $ts->image }}" alt="products images">
 										</a>
 									</div>
 									<div class="details-area">
@@ -199,7 +199,7 @@
 								<div class="item-area">
 									<div class="product-image-area">
 										<a href="{{ route('product_detail', $ts->slug) }}" class="product-image">
-											<img src="../photos/shares/products/{{ $ts->image }}" alt="products images">
+											<img src="{{ $ts->image }}" alt="products images">
 										</a>
 									</div>
 									<div class="details-area">

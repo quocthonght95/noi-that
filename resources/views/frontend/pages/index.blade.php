@@ -43,7 +43,7 @@
               <h2>Sofa nổi bật</h2>
             </div>
             <div id="best-seller-slider" class="product-flexslider hidden-buttons">
-              <div class="slider-items slider-width-col4"> 
+              <div class="slider-items slider-width-col4">
                 <!-- Item -->
                 @foreach($sofa as $s)
                 <div class="item">
@@ -53,14 +53,14 @@
                     @endif
                       {{-- <div class="new-label new-top-left">New</div> --}}
                     <div class="images-container">
-                      <a class="product-image" title="{{ $s->name }}" href="product_detail.html">
-                        <img src="photos/shares/products/{{ $s->image }}"
+                      <a class="product-image" title="{{ $s->name }}" href="{{ route('product_detail', $s->slug) }}">
+                        <img src="{{ $s->image }}"
                         class="img-responsive" alt="product-image" />
                       </a>
                       <div class="actions">
                         <div class="actions-inner">
                           <button type="button" title="Thêm vào giỏ hàng" class="button btn-cart">
-                            <span> + giỏ hàng</span>
+                            <a href="{{ route('add_cart', $s->id) }}"><span>+ Giỏ hàng</span></a>
                           </button>
                           <ul class="add-to-links">
                             <li><a href="wishlist.html" title="Thêm vào yêu thích" class="link-wishlist">
@@ -81,7 +81,7 @@
                     <div class="info">
                       <div class="info-inner">
                         <div class="item-title">
-                          <a title="{{ $s->name }}" href="product_detail.html">
+                          <a title="{{ $s->name }}" href="{{ route('product_detail', $s->slug) }}">
                             {{ $s->name }}
                           </a>
                         </div>
@@ -93,7 +93,7 @@
                             </div>
                           </div>
                           <div class="price-box">
-                            <p class="special-price"> 
+                            <p class="special-price">
                               <span class="price">
                                 {{ number_format(round($s->unit_price * (100- $s->discount)*0.01, -3)) }} đ
                               </span>
@@ -106,9 +106,9 @@
                             @endif
                           </div>
                         </div>
-                        <!--item-content--> 
+                        <!--item-content-->
                       </div>
-                      <!--info-inner--> 
+                      <!--info-inner-->
 
                       <!--actions-->
                       <div class="clearfix"> </div>
@@ -116,7 +116,7 @@
                   </div>
                 </div>
                 @endforeach
-                <!-- End Item --> 
+                <!-- End Item -->
               </div>
             </div>
           </div>
@@ -133,20 +133,20 @@
                   <div class="col-item">
                     <div class="new-label new-top-left">New</div>
                     <div class="images-container">
-                      <a class="product-image" title="{{$n->name}}" href="product_detail.html">
-                        <img src="photos/shares/products/{{$n->image}}"
+                      <a class="product-image" title="{{$n->name}}" href="{{ route('product_detail', $s->slug) }}">
+                        <img src="{{$n->image}}"
                         class="img-responsive" alt="product-image" />
                       </a>
                       <div class="actions">
                         <div class="actions-inner">
                           <ul class="add-to-links">
                             <li>
-                              <a href="wishlist.html" title="Thêm vào yêu thích" class="link-wishlist">
+                              <a href="" title="Thêm vào yêu thích" class="link-wishlist">
                                 <span>Yêu thích</span>
                               </a>
                             </li>
                             <li>
-                              <a href="compare.html" title="Thêm vào so sánh" class="link-compare ">
+                              <a href="" title="Thêm vào so sánh" class="link-compare ">
                                 <span>So sánh</span>
                               </a>
                             </li>
@@ -154,7 +154,7 @@
                         </div>
                       </div>
                       <div class="qv-button-container">
-                        <a href="quick_view.html" class="qv-e-button btn-quickview-1">
+                        <a href="" class="qv-e-button btn-quickview-1">
                           <span><span>Xem nhanh</span></span>
                         </a>
                       </div>
@@ -162,7 +162,7 @@
                     <div class="info">
                       <div class="info-inner">
                         <div class="item-title">
-                          <a title="{{$n->name}}" href="product_detail.html">
+                          <a title="{{$n->name}}" href="{{ route('product_detail', $s->slug) }}">
                             {{$n->name}}
                           </a>
                         </div>
@@ -191,7 +191,7 @@
                       </div>
                       <div class="actions">
                         <button class="button btn-cart" title="Thêm vào giỏ hàng" type="button">
-                          <span>+ Giỏ hàng</span>
+                          <a href="{{ route('add_cart', $s->id) }}"><span>+ Giỏ hàng</span></a>
                         </button>
                       </div>
                       <div class="clearfix"> </div>
@@ -223,19 +223,19 @@
                 <div class="sale-label sale-top-right">Sale</div>
               @endif
               <div class="images-container">
-                <a class="product-image" title="{{$bg->name}}" href="product_detail.html">
-                  <img alt="a" class="img-responsive" src="photos/shares/products/{{$bg->image}}">
+                <a class="product-image" title="{{$bg->name}}" href="{{ route('product_detail', $s->slug) }}">
+                  <img alt="{{ $bg->name }}" class="img-responsive" src="{{$bg->image}}">
                 </a>
                 <div class="actions">
                   <div class="actions-inner">
                     <ul class="add-to-links">
                       <li>
-                        <a href="wishlist.html" title="Thêm vào yêu thích" class="link-wishlist">
+                        <a href="" title="Thêm vào yêu thích" class="link-wishlist">
                           <span>Yêu thích</span>
                         </a>
                       </li>
                       <li>
-                        <a href="compare.html" title="Thêm vào so sánh" class="link-compare ">
+                        <a href="" title="Thêm vào so sánh" class="link-compare ">
                           <span>So Sánh</span>
                         </a>
                       </li>
@@ -243,7 +243,7 @@
                   </div>
                 </div>
                 <div class="qv-button-container">
-                  <a href="quick_view.html" class="qv-e-button btn-quickview-1" title="Xem nhanh">
+                  <a href="" class="qv-e-button btn-quickview-1" title="Xem nhanh">
                     <span><span>Xem nhanh</span></span>
                   </a>
                 </div>
@@ -251,7 +251,7 @@
               <div class="info">
                 <div class="info-inner">
                   <div class="item-title">
-                    <a title="{{ $bg->name }}" href="product_detail.html">
+                    <a title="{{ $bg->name }}" href="{{ route('product_detail', $s->slug) }}">
                       {{ $bg->name }}
                     </a>
                   </div>
@@ -279,7 +279,9 @@
                 </div>
                 <!--info-inner-->
                 <div class="actions">
-                  <button class="button btn-cart" title="Thêm vào giỏ hàng" type="button"><span>+ Giỏ hàng</span></button>
+                  <button class="button btn-cart" title="Thêm vào giỏ hàng" type="button">
+                    <a href="{{ route('add_cart', $s->id) }}"><span>+ Giỏ hàng</span></a>
+                  </button>
                 </div>
                 <!--actions-->
                 <div class="clearfix"> </div>
@@ -298,7 +300,7 @@
     <div class="row">
       <div class="col-sm-4 custom-slider">
         <div>
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -328,7 +330,7 @@
               </div>
             </div>
 
-            <!-- Controls --> 
+            <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
           </div>
         </div>
@@ -342,12 +344,12 @@
                     <div class="item-area">
                       <div class="product-image-area">
                         <a href="#" class="product-image">
-                          <img src="photos/shares/products/{{ $ts->image }}" alt="products images">
+                          <img src="{{ $ts->image }}" alt="products images">
                         </a>
                       </div>
                       <div class="details-area">
                         <h2 class="product-name">
-                          <a href="#">{{ $ts->name }}</a>
+                          <a href="{{ route('product_detail', $s->slug) }}">{{ $ts->name }}</a>
                         </h2>
                         <div class="ratings">
                           <div class="rating-box">
@@ -385,11 +387,13 @@
                     <div class="item-area">
                       <div class="product-image-area">
                         <a href="#" class="product-image">
-                          <img src="photos/shares/products/{{ $tbg->image }}" alt="products images">
+                          <img src="{{ $tbg->image }}" alt="products images">
                         </a>
                       </div>
                       <div class="details-area">
-                        <h2 class="product-name"><a href="#">{{ $tbg->name }}</a></h2>
+                        <h2 class="product-name">
+                            <a href="{{ route('product_detail', $s->slug) }}">{{ $tbg->name }}</a>
+                        </h2>
                         <div class="ratings">
                           <div class="rating-box">
                             <div class="rating"></div>
@@ -424,24 +428,24 @@
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-4">
-        <div class="blog-img"> <img src="frontend/images/blog-img1.jpg" alt="Image"> 
-          <!--<div class="mask"> <a class="info" href="blog-detail.html">Read More</a> </div>--> 
+        <div class="blog-img"> <img src="frontend/images/blog-img1.jpg" alt="Image">
+          <!--<div class="mask"> <a class="info" href="blog-detail.html">Read More</a> </div>-->
         </div>
         <h3><a href="blog-detail.html">Pellentesque habitant morbi</a> </h3>
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
         <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
       </div>
       <div class="col-xs-12 col-sm-4 wow">
-        <div class="blog-img"> <img src="frontend/images/blog-img2.jpg" alt="Image"> 
-          <!--<div class="mask"> <a class="info" href="blog-detail.html">Read More</a> </div>--> 
+        <div class="blog-img"> <img src="frontend/images/blog-img2.jpg" alt="Image">
+          <!--<div class="mask"> <a class="info" href="blog-detail.html">Read More</a> </div>-->
         </div>
         <h3><a href="blog-detail.html">Pellentesque habitant morbi</a> </h3>
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
         <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
       </div>
       <div class="col-xs-12 col-sm-4">
-        <div class="blog-img"> <img src="frontend/images/blog-img3.jpg" alt="Image"> 
-          <!--<div class="mask"> <a class="info" href="blog-detail.html">Read More</a> </div>--> 
+        <div class="blog-img"> <img src="frontend/images/blog-img3.jpg" alt="Image">
+          <!--<div class="mask"> <a class="info" href="blog-detail.html">Read More</a> </div>-->
         </div>
         <h3><a href="blog-detail.html">Pellentesque habitant morbi</a> </h3>
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
@@ -466,8 +470,8 @@
                       <div class="sale-label sale-top-right">Sale</div>
                     @endif
                     <div class="images-container">
-                      <a class="product-image" title="{{$bg->name}}" href="product_detail.html">
-                        <img alt="a" class="img-responsive" src="photos/shares/products/{{$bg->image}}">
+                      <a class="product-image" title="{{$bg->name}}" href="{{ route('product_detail', $s->slug) }}">
+                        <img alt="a" class="img-responsive" src="{{$bg->image}}">
                       </a>
                       <div class="actions">
                         <div class="actions-inner">
@@ -494,7 +498,7 @@
                     <div class="info">
                       <div class="info-inner">
                         <div class="item-title">
-                          <a title="{{ $bg->name }}" href="product_detail.html">
+                          <a title="{{ $bg->name }}" href="{{ route('product_detail', $s->slug) }}">
                             {{ $bg->name }}
                           </a>
                         </div>
@@ -522,7 +526,9 @@
                       </div>
                       <!--info-inner-->
                       <div class="actions">
-                        <button class="button btn-cart" title="Thêm vào giỏ hàng" type="button"><span>+ Giỏ hàng</span></button>
+                        <button class="button btn-cart" title="Thêm vào giỏ hàng" type="button">
+                            <a href="{{ route('add_cart', $s->id) }}"><span>+ Giỏ hàng</span></a>
+                        </button>
                       </div>
                       <!--actions-->
                       <div class="clearfix"> </div>

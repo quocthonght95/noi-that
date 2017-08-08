@@ -41,7 +41,7 @@ class ProductController extends Controller
             $avatar = $request->file('image');
 
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->fit(400,225)->save(public_path('/photos/product'.$filename));
+            Image::make($avatar)->resize(700,850)->save(public_path('/photos/product'.$filename));
             $img = ('/photos/product'.$filename);
             $data = [
                 'name' => $request->name,
@@ -82,7 +82,7 @@ class ProductController extends Controller
             $avatar = $request->file('image');
 
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->fit(400,225)->save(public_path('/photos/product'.$filename));
+            Image::make($avatar)->resize(700,850)->save(public_path('/photos/product'.$filename));
             $img = ('/photos/product'.$filename);
             $data = [
                 'name' => $request->name,

@@ -6,7 +6,7 @@
 		<div class="row">
 			<ul>
 				<li class="home">
-					<a href="index.html" title="Go to Home Page">Trang chủ</a>
+					<a href="{{ route('home') }}" title="Go to Home Page">Trang chủ</a>
 					<span>&mdash;›</span>
 				</li>
 				<li class="">Chi tiết sản phẩm<span>&mdash;›</span></li>
@@ -26,9 +26,9 @@
 								<ul class="moreview" id="moreview">
 									<li class="moreview_thumb thumb_6">
 										<img class="moreview_thumb_image"
-											src="../photos/shares/products/{{ $product_detail->image }}">
+											src="{{ $product_detail->image }}">
 										<img class="moreview_source_image"
-											src="../photos/shares/products/{{ $product_detail->image }}" alt="">
+											src="{{ $product_detail->image }}" alt="">
 											<span class="roll-over">Di chuyển chuột vào hình để phóng to</span>
 										<img style="position: absolute;" class="zoomImg"
 											src="frontend/products-images/product8.jpg">
@@ -99,7 +99,9 @@
 											</div>
 											<button onClick="productAddToCartForm.submit(this)" class="button btn-cart"
 											title="Thêm vào giỏ hàng" type="button">
-												<span><i class="icon-basket"></i> + Giỏ hàng</span>
+												<a href="{{ route('add_cart', $product_detail->id) }}">
+                                                    <span><i class="icon-basket"></i> + Giỏ hàng</span>
+                                                </a>
 											</button>
 										</div>
 										<div class="email-addto-box">
@@ -161,13 +163,12 @@
 																	href="{{ route('product_detail',
 																	$p->slug) }}">
 																<img alt="a" class="img-responsive"
-																	src="../photos/shares/products/
-																	{{ $p->image }}">
+																	src="{{ $p->image }}">
 																	</a>
 																</a>
 																<div class="actions">
 																	<div class="actions-inner">
-																		<button type="button" title="Thêm vào giỏ hàng" class="button btn-cart"><span>+ Giỏ hàng</span></button>
+																		<button type="button" title="Thêm vào giỏ hàng" class="button btn-cart"><a href="{{ route('add_cart', $p->id) }}"><span>+ Giỏ hàng</span></a></button>
 																		<ul class="add-to-links">
 																			<li><a title="Yêu thích" class="link-wishlist"><span>Yêu thích</span></a></li>
 																			<li><a title="Add to Compare" class="link-compare"><span>So sánh</span></a></li>
@@ -210,7 +211,7 @@
 																</div>
 																<!--info-inner-->
 																<div class="actions">
-																	<button class="button btn-cart" title="Thêm vào giỏ hàng" type="button"><span>+ Giỏ hàng</span></button>
+																	<button class="button btn-cart" title="Thêm vào giỏ hàng" type="button"><a href="{{ route('add_cart', $p->id) }}"><span>+ Giỏ hàng</span></a></button>
 																</div>
 																<!--actions-->
 
