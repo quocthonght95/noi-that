@@ -57,7 +57,7 @@
 										<td class="image">
 											<a class="product-image" title="{{ $c->name }}"
 												href="#/women-s-crepe-printed-black/">
-												<img width="75" alt="Sample Product" src="photos/shares/products/{{ $c->options->img }}">
+												<img width="75" alt="Sample Product" src="{{ $c->options->img }}">
 											</a>
 										</td>
 										<td>
