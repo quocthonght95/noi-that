@@ -1,7 +1,7 @@
 <header class="header-container">
     <div class="header-top">
       <div class="container">
-        <div class="row"> 
+        <div class="row">
           <!-- Header Language -->
           <div class="col-xs-6">
             <div class="dropdown block-language-wrapper"> <a role="button" data-toggle="dropdown" data-target="#" class="block-language dropdown-toggle" href="#"> <img src="/frontend/images/english.png" alt="language"> English <span class="caret"></span> </a>
@@ -10,28 +10,28 @@
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="/frontend/images/francais.png" alt="language"> French </a></li>
               </ul>
             </div>
-            <!-- End Header Language --> 
+            <!-- End Header Language -->
           </div>
-          <div class="col-xs-6"> 
+          <div class="col-xs-6">
             <!-- Header Top Links -->
             <div class="toplinks">
               <div class="links">
                 <div class="phone hidden-xs">01639.27.72.72</div>
               </div>
             </div>
-            <!-- End Header Top Links --> 
+            <!-- End Header Top Links -->
           </div>
         </div>
       </div>
     </div>
     <div class="header container">
       <div class="row">
-        <div class="col-lg-2 col-sm-3 col-md-2 col-xs-12"> 
-          <!-- Header Logo --> 
-          <a class="logo" title="Magento Commerce" href="{{ route('home') }}"><img alt="Magento Commerce" src="/frontend/images/logo.png"></a> 
-          <!-- End Header Logo --> 
+        <div class="col-lg-2 col-sm-3 col-md-2 col-xs-12">
+          <!-- Header Logo -->
+          <a class="logo" title="Magento Commerce" href="{{ route('home') }}"><img alt="Magento Commerce" src="/frontend/images/logo.png"></a>
+          <!-- End Header Logo -->
         </div>
-        <div class="col-lg-7 col-sm-4 col-md-6 col-xs-12"> 
+        <div class="col-lg-7 col-sm-4 col-md-6 col-xs-12">
           <!-- Search-col -->
           <div class="search-box">
             <form action="http://htmldemo.magikcommerce.com/ecommerce/inspire-html-template/furniture/cat" method="POST" id="search_mini_form" name="Categories">
@@ -44,7 +44,7 @@
               <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
             </form>
           </div>
-          <!-- End Search-col --> 
+          <!-- End Search-col -->
         </div>
         <!-- Top Cart -->
         <div class="col-lg-3 col-sm-5 col-md-4 col-xs-12">
@@ -63,12 +63,12 @@
                         <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
                           <p class="product-name"> <a href="#" title="Downloadable Product">{{ $c->name }} </a> </p>
                         </div>
-                        <div class="product-details-bottom"> <span class="price">{{ number_format(round($c->price * (100- $c->discount)*0.01, -3)) }}đ</span> <span class="title-desc">Số lượng:</span> <strong>{{ $c->qty }}</strong> </div>
+                        <div class="product-details-bottom"> <span class="price">{{ number_format($c->price) }}đ</span> <span class="title-desc">Số lượng:</span> <strong>{{ $c->qty }}</strong> </div>
                       </div>
                     </li>
                     @endforeach
                   </ul>
-                  <div class="top-subtotal">Tổng tiền: <span class="price">{{ number_format(round($totals, -3)) }} đ</span></div>
+                  <div class="top-subtotal">Tổng tiền: <span class="price">{{ $totals }} đ</span></div>
                   <div class="actions">
                     <button class="btn-checkout" type="button"><span><a href="">Mua hàng</a></span></button>
                     <button class="view-cart" type="button"><span><a href="{{ route('cart') }}">Giỏ hàng</a></span></button>

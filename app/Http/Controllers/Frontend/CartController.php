@@ -28,7 +28,7 @@ class CartController extends Controller
     {
     	$content = Cart::content();
     	$total = Cart::total();
-    	// dd($content);
+    	// dd($total);
 
     	return view('frontend.pages.cart', compact('content', 'total'));
     }
@@ -36,8 +36,9 @@ class CartController extends Controller
     public function addCart($id)
     {
     	$product_buy = $this->product_repository->productBuy($id);
+        $format_price = round($product_buy->unit_price - $product_buy->discount*0.01*$product_buy->unit_price, -3);
         Cart::add(array('id' => $id, 'name' =>$product_buy->name, 'qty' =>1,
-            'price' => $product_buy->unit_price, 'options'=>array('img' => $product_buy->image)));
+            'price' => $format_price, 'options'=>array('img' => $product_buy->image)));
         $content = Cart::content();
 
         return redirect()->back();
