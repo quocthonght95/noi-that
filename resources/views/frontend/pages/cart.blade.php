@@ -69,7 +69,7 @@
 										<td class="a-right">
 											<span class="cart-price">
 												<span class="price">
-													{{ number_format(round($c->price * (100- $c->discount)*0.01, -3)) }}đ
+													{{ number_format($c->price) }}đ
 												</span>
 											</span>
 										</td>
@@ -80,7 +80,7 @@
 										<td class="a-right movewishlist">
 											<span class="cart-price">
 												<span class="price">
-													{{ number_format(round($c->price * $c->qty, -3)) }}đ
+													{{ number_format($c->price * $c->qty) }}đ
 												</span>
 											</span>
 										</td>
@@ -108,7 +108,11 @@
 							<tfoot>
 								<tr>
 									<td colspan="1" class="a-lèt" style=""><strong>Tổng cộng</strong></td>
-									<td class="a-right" style=""><strong><span class="price">{{ number_format(round($total, -3)) }} đ</span></strong></td>
+									<td class="a-right" style="">
+                                        <strong>
+                                            <span class="price">{{ $total }} đ</span>
+                                        </strong>
+                                    </td>
 								</tr>
 							</tfoot>
 						</table>
