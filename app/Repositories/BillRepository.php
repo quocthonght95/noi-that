@@ -11,4 +11,9 @@ class BillRepository extends BaseRepository
     {
     	$this->model = new Bill();
     }
+
+    public function getLastInsertId()
+    {
+        return $this->model->all()->max('id');
+    }
 }

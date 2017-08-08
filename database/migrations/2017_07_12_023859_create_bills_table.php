@@ -17,8 +17,8 @@ class CreateBillsTable extends Migration
             $table->increments('id');
             $table->date('date_order');
             $table->integer('total')->unsigned();
-            $table->integer('note')->nullable();
-            $table->integer('status_id')->unsigned();
+            $table->string('note')->nullable();
+            $table->integer('status_id')->unsigned()->default(1);
             $table->integer('payment_id')->unsigned();
             $table->timestamps();
         });
