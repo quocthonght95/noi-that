@@ -29,6 +29,10 @@ Route::get('logout', 'LoginController@logout')->name('logout');
 Route::get('register', 'RegisterController@getRegister')->name('getRegister');
 Route::post('register', 'RegisterController@postRegister')->name('postRegister');
 Route::get('activate/{email}/{activationCode}', 'ActivationController@activate')->name('activate');
+Route::get('forgot-password', 'ForgotPasswordController@forgotPassword')->name('getforgot-password');
+Route::post('forgot-password', 'ForgotPasswordController@postForgotPassword')->name('forgot-password');
+Route::get('reset/{email}/{resetCode}', 'ForgotPasswordController@resetPassword')->name('getreset-password');
+Route::post('reset/{email}/{resetCode}', 'ForgotPasswordController@postResetPassword')->name('reset-password');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('login', 'Admin\LoginController@index')->name('admin.login');
