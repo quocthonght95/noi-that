@@ -51,19 +51,18 @@
                             </ul>
                             <div class="form-group">
                                     <div class="col-xs-12">
-                                        <div class="checkbox-inline icheck pull-left pt0">
-                                            <label for="">
-                                                <input type="checkbox" name="remember"></input>
-                                                Nhớ thông tin
-                                            </label>
-                                        </div>
+                                        <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox">Remember Me
+                                    </label>
+                                </div>
                                     </div>
                             </div>
                             <div class="buttons-set">
                                 <button id="send2" name="send" type="submit" class="button login">
                                     <span>Đăng nhập</span>
                                 </button>
-                                <a class="forgot-word" href="">Quên mật khẩu ?</a>
+                                <a class="forgot-word" href="{{ route('getforgot-password') }}">Quên mật khẩu ?</a>
                             </div>
                         </form>
                     </div>
