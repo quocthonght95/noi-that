@@ -16,7 +16,7 @@
             <!-- Header Top Links -->
             <div class="toplinks">
               <div class="links">
-                <div class="phone hidden-xs">01639.27.72.72</div>
+
               </div>
             </div>
             <!-- End Header Top Links -->
@@ -83,9 +83,17 @@
               <input class="title_shopping_cart" value="Go to shopping cart" type="hidden">
             </div>
           </div>
-          <div class="signup"><a title="Login" href="login.html"><span>Đăng ký</span></a></div>
+          @if(!Sentinel::check())
+          <div class="signup"><a title="Login" href="{{ route('getRegister') }}"><span>Đăng ký</span></a></div>
           <span class="or"> | </span>
-          <div class="login"><a title="Login" href="login.html"><span>Đăng nhập</span></a></div>
+          <div class="login"><a title="Login" href="{{ route('getLogin') }}"><span>Đăng nhập</span></a></div>
+          @else
+
+          <div class="signup"><a title="Login" href="{{ route('logout') }}"><span>Đăng xuất</span></a></div>
+          <span class="or"> | </span>
+          <div class="login"><a title="Login" href="#"><span>Tài khoản</span></a></div>
+
+          @endif
         </div>
       </div>
     </div>

@@ -23,6 +23,12 @@ Route::get('gio-hang', 'Frontend\CartController@index')->name('cart');
 Route::get('them-gio-hang/{id}', 'Frontend\CartController@addCart')->name('add_cart');
 Route::get('mua-hang', 'Frontend\CartController@getOrder')->name('getOrder');
 Route::post('mua-hang/{id}', 'Frontend\CartController@postOrder')->name('postOrder');
+Route::get('login', 'LoginController@getLogin')->name('getLogin');
+Route::post('login', 'LoginController@postLogin')->name('postLogin');
+Route::get('logout', 'LoginController@logout')->name('logout');
+Route::get('register', 'RegisterController@getRegister')->name('getRegister');
+Route::post('register', 'RegisterController@postRegister')->name('postRegister');
+Route::get('activate/{email}/{activationCode}', 'ActivationController@activate')->name('activate');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('login', 'Admin\LoginController@index')->name('admin.login');
