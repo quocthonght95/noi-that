@@ -48,7 +48,7 @@ class BaseRepository
      */
     public function getById($id)
     {
-        return $this->model->findOrFail($id);
+        return $this->model->find($id);
     }
 
     /**
