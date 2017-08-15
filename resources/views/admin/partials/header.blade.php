@@ -48,7 +48,7 @@
 		</li>
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle username" data-toggle="dropdown">
-				<span class="hidden-xs">{{$userlogin->email}}</span>
+				<span class="hidden-xs">@if(Sentinel::check()) {{$userlogin->email}} @endif</span>
 			</a>
 			<ul class="dropdown-menu userinfo">
 				<li><a href="#"><span class="pull-left">Edit Profile</span> <i class="pull-right fa fa-pencil"></i></a></li>

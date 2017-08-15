@@ -11,7 +11,7 @@
 								</div>
 								<div class="tabular-cell welcome-options">
 									<span class="welcome-text">Welcome,</span>
-									<a href="#" class="name">{{$userlogin->email}}</a>
+									<a href="#" class="name">@if(Sentinel::check()) {{ $userlogin->email }} @endif</a>
 								</div>
 							</div>
 						</div>
