@@ -8,8 +8,14 @@
 				<div class="page-title">
 					<h2>Giỏ hàng</h2>
 				</div>
+                @if(Session::has('error'))
+                    <span class="alert-warning">{{ Session::get('error') }}</span>
+                    <br>
+                    <br>
+                @endif
 				<div class="table-responsive">
 					<form method="post" action="#updatePost/">
+                        <input name="_token" type="hidden" value="{{csrf_token()}}">
 						<input type="hidden" value="Vwww7itR3zQFe86m" name="form_key">
 						<fieldset>
 							<table class="data-table cart-table" id="shopping-cart-table">
@@ -19,21 +25,19 @@
 								<col width="1">
 								<col width="1">
 								<col width="1">
-								<col width="1">
-								<col width="1">
+								<col width="2">
 							</colgroup>
 							<thead>
 								<tr class="first last">
 									<th rowspan="1">&nbsp;</th>
 									<th rowspan="1"><span class="nobr">Tên sản phẩm</span></th>
-									<th rowspan="1"></th>
 									<th colspan="1" class="a-center"><span class="nobr">Giá</span></th>
 									<th class="a-center" rowspan="1">Số lượng</th>
 									<th colspan="1" class="a-center">Tổng giá</th>
 									<th class="a-center" rowspan="1">&nbsp;</th>
 								</tr>
 							</thead>
-							<tfoot>
+							{{-- <tfoot>
 								<tr class="first last">
 									<td class="a-right last" colspan="50">
 										<button onclick="setLocation('#')" class="button btn-continue"
@@ -50,7 +54,7 @@
 										</button>
 									</td>
 								</tr>
-							</tfoot>
+							</tfoot> --}}
 							<tbody>
 								@foreach($content as $c)
 									<tr class="first odd">
@@ -63,9 +67,6 @@
 										<td>
 											<h2 class="product-name">{{ $c->name }}</h2>
 										</td>
-										<td class="a-center">
-											<a title="Edit item parameters" class="edit-bnt" href="#"></a>
-										</td>
 										<td class="a-right">
 											<span class="cart-price">
 												<span class="price">
@@ -74,17 +75,22 @@
 											</span>
 										</td>
 										<td class="a-center movewishlist">
-											<input maxlength="2" class="input-text qty" title="Qty"
-											size="4" value="{{ $c->qty }}" name="">
+											<input class="qty" name="" type="text" max="9"
+                                            min="1" step="1" value="{{$c->qty}}" />
 										</td>
 										<td class="a-right movewishlist">
 											<span class="cart-price">
-												<span class="price">
+												<span class="price" id="total-price_{{$c->rowId}}">
 													{{ number_format($c->price * $c->qty) }}đ
 												</span>
 											</span>
 										</td>
-										<td class="a-center last"><a class="button remove-item" title="Xóa" href="#"><span><span>Xóa</span></span></a></td>
+										<td class="a-center last">
+                                            <a class="button remove-item" href="{{ route('destroy_cart', $c->rowId) }}">
+                                                <span><span>Xóa</span></span>
+                                            </a>
+                                            <a href="#" id="{{ $c->rowId }}" class="update_cart edit-bnt"></a>
+                                        </td>
 									</tr>
 								@endforeach()
 							</tbody>
@@ -107,10 +113,10 @@
 							</colgroup>
 							<tfoot>
 								<tr>
-									<td colspan="1" class="a-lèt" style=""><strong>Tổng cộng</strong></td>
+									<td colspan="1" class="a-left" style=""><strong>Tổng cộng</strong></td>
 									<td class="a-right" style="">
                                         <strong>
-                                            <span class="price">{{ $total }} đ</span>
+                                            <span class="price" id="total_product">{{ $total }} đ</span>
                                         </strong>
                                     </td>
 								</tr>

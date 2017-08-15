@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Http\Requests\CustomerRequest;
 use App\Http\Controllers\Controller;
 use App\Repositories\ProductRepository;
@@ -13,6 +13,7 @@ use App\Repositories\BillDetailRepository;
 use Cart;
 use Session;
 use Sentinel;
+use Request;
 
 class CartController extends Controller
 {
@@ -45,6 +46,33 @@ class CartController extends Controller
 
     }
 
+    public function updateCart()
+    {
+        if(Request::ajax())
+        {
+            $id = Request::get('id');
+            $qty = Request::get('qty');
+            if($qty<10 and $qty>0)
+            {
+                Cart::update($id, $qty);
+            }
+            $data = [
+                'qty'  => Cart::count(),
+                'total' => Cart::subtotal(),
+                'qty1' => Cart::get($id)->qty,
+                'price' => Cart::get($id)->price,
+                'id' => $id,
+            ];
+             return response($data,200,[]);
+        }
+    }
+
+    public function destroyCart($id)
+    {
+        Cart::remove($id);
+        return redirect()->route('cart');
+    }
+
     public function getOrder()
     {
         $id = Sentinel::getUser()->id;
@@ -58,38 +86,41 @@ class CartController extends Controller
     {
         $content = Cart::content();
         $total = round(Cart::total());
-        // dd($total);
-        if($this->customer_repository->getById($id) == null) {
-            $data_customer = [
-                'name' => $request->name,
-                'email' => $request->email,
-                'address' => $request->address,
-                'note' => $request->note,
-                'phone' => $request->phone
+        if($total > 0){
+            if($this->customer_repository->getById($id) == null) {
+                $data_customer = [
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'address' => $request->address,
+                    'note' => $request->note,
+                    'phone' => $request->phone
+                ];
+                $this->customer_repository->store($data_customer);
+            }
+
+            $data_bill = [
+                'customer_id' => $id,
+                'date_order' => date('Y-m-d'),
+                'total' => $total,
+                'payment_id' => $request->payment,
+                'note' => $request->notes,
             ];
-            $this->customer_repository->store($data_customer);
+            $this->bill_repository->store($data_bill);
+
+            foreach ($content as $product) {
+                $data_detail = [
+                    'bill_id' => $this->bill_repository->getLastInsertId(),
+                    'product_id' => $product->id,
+                    'quantity' => $product->qty,
+                    'unit_price' => $product->price,
+                ];
+                $this->bill_detail_repository->store($data_detail);
+            }
+            Session::forget('cart');
+
+            return redirect()->back()->with('success','Đặt hàng thành công');
+        }else{
+            return redirect()->route('cart')->with('error', 'Giỏ hàng rỗng, vui lòng thêm sản phẩm rồi đặt hàng');
         }
-
-        $data_bill = [
-            'customer_id' => $id,
-            'date_order' => date('Y-m-d'),
-            'total' => $total,
-            'payment_id' => $request->payment,
-            'note' => $request->notes,
-        ];
-        $this->bill_repository->store($data_bill);
-
-        foreach ($content as $product) {
-            $data_detail = [
-                'bill_id' => $this->bill_repository->getLastInsertId(),
-                'product_id' => $product->id,
-                'quantity' => $product->qty,
-                'unit_price' => $product->price,
-            ];
-            $this->bill_detail_repository->store($data_detail);
-        }
-        Session::forget('cart');
-
-        return redirect()->back()->with('success','Đặt hàng thành công');
     }
 }
