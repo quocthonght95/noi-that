@@ -60,15 +60,16 @@
                     @foreach($contents as $c)
                     <li class="item even"> <a class="product-image" href="{{ route('product_detail', $c->slug) }}" title="{{ $c->name }}"><img src="photos/shares/products/{{ $c->options->img }}" width="80"></a>
                       <div class="detail-item">
-                        <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
+                        <div class="product-details">
+                            <a href="{{ route('destroy_cart', $c->rowId) }}" class="glyphicon glyphicon-remove">&nbsp;</a>
                           <p class="product-name"> <a href="#" title="Downloadable Product">{{ $c->name }} </a> </p>
                         </div>
-                        <div class="product-details-bottom"> <span class="price">{{ number_format($c->price) }}đ</span> <span class="title-desc">Số lượng:</span> <strong>{{ $c->qty }}</strong> </div>
+                        <div class="product-details-bottom"> <span class="price">{{ number_format($c->price) }}đ</span> <span class="title-desc">Số lượng:</span> <strong id="qty-item">{{ $c->qty }}</strong> </div>
                       </div>
                     </li>
                     @endforeach
                   </ul>
-                  <div class="top-subtotal">Tổng tiền: <span class="price">{{ $totals }} đ</span></div>
+                  <div class="top-subtotal">Tổng tiền: <span class="price" id="total-item">{{ $totals }} đ</span></div>
                   <div class="actions">
                     <button class="btn-checkout" type="button"><span><a href="">Mua hàng</a></span></button>
                     <button class="view-cart" type="button"><span><a href="{{ route('cart') }}">Giỏ hàng</a></span></button>

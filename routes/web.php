@@ -22,6 +22,8 @@ Route::get('san-pham/{slug}', 'Frontend\ProductController@getProductByCategory')
 Route::get('chi-tiet-san-pham/{slug}', 'Frontend\ProductController@productDetail')->name('product_detail');
 Route::get('gio-hang', 'Frontend\CartController@index')->name('cart');
 Route::get('them-gio-hang/{id}', 'Frontend\CartController@addCart')->name('add_cart');
+Route::get('cap-nhat/{id}/{qty}', 'Frontend\CartController@updateCart')->name('update_cart');
+Route::get('xoa/{id}', 'Frontend\CartController@destroyCart')->name('destroy_cart');
 
 Route::group(['middleware' => 'visitors'], function() {
     Route::get('login', 'LoginController@getLogin')->name('getLogin');

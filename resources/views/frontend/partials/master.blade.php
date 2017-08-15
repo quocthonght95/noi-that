@@ -35,11 +35,11 @@
   <!-- end header -->
   <!-- Navbar -->
   @include('frontend.partials.menu')
-  <!-- end nav --> 
+  <!-- end nav -->
   @yield('content')
   <!-- Footer -->
   @include('frontend.partials.footer')
-  <!-- End Footer --> 
+  <!-- End Footer -->
 </div>
 <div class="social">
   <ul>
@@ -53,14 +53,15 @@
   </ul>
 </div>
 
-<!-- JavaScript --> 
-<script type="text/javascript" src="{{ asset('/frontend/js/jquery.min.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('/frontend/js/bootstrap.min.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('/frontend/js/jquery.jcarousel.min.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('/frontend/js/cloudzoom.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('/frontend/js/common.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('/frontend/js/revslider.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('/frontend/js/owl.carousel.min.js') }}"></script> 
+<!-- JavaScript -->
+<script type="text/javascript" src="{{ asset('/frontend/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/frontend/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/frontend/js/jquery.jcarousel.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/frontend/js/cloudzoom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/frontend/js/common.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/frontend/js/revslider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/frontend/js/owl.carousel.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/frontend/js/cart.js') }}"></script>
 <script type='text/javascript'>
 jQuery(document).ready(function(){
 jQuery('#rev_slider_4').show().revolution({
