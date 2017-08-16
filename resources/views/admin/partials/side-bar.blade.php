@@ -20,7 +20,8 @@
 						<span class="widget-heading">Explore</span>
 						<nav role="navigation" class="widget-body">
 							<ul class="acc-menu">
-								<li><a href="{{ route('admin.index') }}"><i class="fa fa-home"></i><span>Dashboard</span><span class="badge badge-dark">1</span></a></li>
+                                <li><a href="{{ route('admin.index') }}"><i class="fa fa-home"></i><span>Dashboard</span><span class="badge badge-dark">1</span></a></li>
+                                <li><a href="{{ route('admin.bill.list') }}"><i class="fa fa-home"></i><span>Bill</span><span class="badge badge-dark">1</span></a></li>
 								<li><a href="javascript:;"><i class="fa fa-columns"></i><span>Manager Category</span><span class="badge badge-dark">23</span></a>
 									<ul class="acc-menu">
 										<li><a href="{{ route('admin.category.getCreate') }}">Add</a></li>

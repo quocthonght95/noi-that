@@ -11,4 +11,9 @@ class BillDetailRepository extends BaseRepository
     {
     	$this->model = new Bill_detail;
     }
+
+    public function getByBillId($id)
+    {
+        return $this->model->where('bill_id', $id)->get();
+    }
 }

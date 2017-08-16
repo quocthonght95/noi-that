@@ -25,8 +25,9 @@ class StatusTableSeeder extends Seeder
                 'status_name' => 'Cancelled',
             ]
         ];
-
+        
         foreach ($status as $st) {
             DB::table('status')->insert($st);
-        }    }
+        }
+    }
 }

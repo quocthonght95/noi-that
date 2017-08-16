@@ -8,4 +8,9 @@ class Customer extends Model
 {
     protected $table = 'customers';
     protected $fillable = ['name', 'email', 'address', 'phone'];
+
+    public function Bill()
+    {
+        return $this->hasOne('App\Models\Bill', 'customer_id', 'id');
+    }
 }

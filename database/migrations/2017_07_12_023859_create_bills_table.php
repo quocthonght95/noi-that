@@ -20,6 +20,7 @@ class CreateBillsTable extends Migration
             $table->string('note')->nullable();
             $table->integer('status_id')->unsigned()->default(1);
             $table->integer('payment_id')->unsigned();
+            $table->integer('customer_id')->unsigned();
             $table->timestamps();
         });
     }

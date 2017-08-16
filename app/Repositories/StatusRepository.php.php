@@ -9,6 +9,6 @@ class StatusRepository extends BaseRepository
 {
     public function __construct()
     {
-    	$this->model = new Status;
+    	$this->model = new Status();
     }
 }

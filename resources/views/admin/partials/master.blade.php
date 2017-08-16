@@ -20,18 +20,12 @@
     <link href="{{ asset('admin/assets/plugins/form-daterangepicker/daterangepicker-bs3.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('admin/assets/plugins/switchery/switchery.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('admin/assets/plugins/fullcalendar/fullcalendar.css') }}" type="text/css" rel="stylesheet">-->
+
+
 </head>
 
     <body class="infobar-offcanvas">
-    	<script>
-    		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    		})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
 
-    		ga('create', 'UA-44426473-3', 'auto');
-    		ga('send', 'pageview');
-    	</script>
 
     	@include('admin.partials.header')
 		@include('admin.partials.side-bar')
@@ -45,7 +39,9 @@
 </div>
 <!-- Load site level scripts -->
 
+
 <script src="{{ asset('admin/assets/js/jquery-1.10.2.min.js') }}"></script> 							<!-- Load jQuery -->
+<script type="text/javascript" src="{{ asset('/frontend/js/jquery.min.js') }}"></script>
 <script src="{{ asset('admin/assets/js/jqueryui-1.9.2.min.js') }}"></script> 							<!-- Load jQueryUI -->
 <script src="{{ asset('admin/assets/js/bootstrap.min.js') }}"></script> 								<!-- Load Bootstrap -->
 
@@ -99,9 +95,11 @@
 
 <script src="{{ asset('admin/assets/js/admin.js') }}"></script>                                  <!-- Initialize scripts for this page-->
 <script src="{{ asset('admin/assets/demo/demo-index.js') }}"></script> 									<!-- Initialize scripts for this page-->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <!-- End loading page level scripts-->
 
+@yield('script')
 </body>
 
 <!-- Mirrored from avalon.redteamux.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 Oct 2014 07:42:50 GMT -->

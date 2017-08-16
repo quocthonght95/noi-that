@@ -25,6 +25,7 @@ class Relations extends Migration
         Schema::table('bills', function(Blueprint $table){
             $table->foreign('status_id')->references('id')->on('status')->onDelete('cascade');
             $table->foreign('payment_id')->references('id')->on('payments')->onDelete('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
         Schema::table('images', function(Blueprint $table){
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
