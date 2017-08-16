@@ -134,6 +134,7 @@ fullScreenOffsetContainer: ''
 });
 });
 </script>
+@yield('script')
 </body>
 
 <!-- Mirrored from htmldemo.magikcommerce.com/ecommerce/inspire-html-template/furniture/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2015 08:03:59 GMT -->

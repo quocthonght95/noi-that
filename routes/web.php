@@ -41,6 +41,8 @@ Route::group(['middleware' => 'visitors'], function() {
 Route::group(['middleware' => 'customer'], function() {
     Route::get('mua-hang', 'Frontend\CartController@getOrder')->name('getOrder');
     Route::post('mua-hang/{id}', 'Frontend\CartController@postOrder')->name('postOrder');
+    Route::get('profile', 'UserController@getProfile')->name('profile');
+    Route::post('profile', 'UserController@postProfile')->name('postProfile');
 });
 
 Route::group(['middleware' => 'admin'], function() {

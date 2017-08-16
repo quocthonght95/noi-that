@@ -71,7 +71,7 @@
                   </ul>
                   <div class="top-subtotal">Tổng tiền: <span class="price" id="total-item">{{ $totals }} đ</span></div>
                   <div class="actions">
-                    <button class="btn-checkout" type="button"><span><a href="">Mua hàng</a></span></button>
+                    <button class="btn-checkout" type="button"><span><a href="{{ route('getOrder') }}">Mua hàng</a></span></button>
                     <button class="view-cart" type="button"><span><a href="{{ route('cart') }}">Giỏ hàng</a></span></button>
                   </div>
                 </div>
@@ -92,7 +92,7 @@
 
           <div class="signup"><a title="Login" href="{{ route('logout') }}"><span>Đăng xuất</span></a></div>
           <span class="or"> | </span>
-          <div class="login"><a title="Login" href="#"><span>Tài khoản</span></a></div>
+          <div class="login"><a title="Login" href="{{ route('profile') }}"><span>Tài khoản</span></a></div>
 
           @endif
         </div>
