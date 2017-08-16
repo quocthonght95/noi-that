@@ -65,6 +65,20 @@ Route::group(['middleware' => 'admin'], function() {
             Route::post('edit/{id}', 'Admin\ProductController@postEdit')->name('admin.products.postEdit');
             Route::get('destroy/{slug}', 'Admin\ProductController@destroy')->name('admin.products.destroy');
         });
+        Route::group(['prefix' => 'bill'], function()
+        {
+            Route::get('show', 'Admin\BillController@showBillsList')->name('admin.bill.list');
+
+            Route::post('update/{id}', 'Admin\BillController@update')->name('admin.bill.update');
+
+            Route::get('remove/{id}', 'Admin\BillController@remove')->name('admin.bill.remove');
+
+            Route::get('print/{id}', 'Admin\BillController@printf')->name('admin.bill.print');
+        });
+        Route::group(['prefix' => 'billdetail'], function()
+        {
+            Route::get('show/{id}', 'Admin\BillDetailsController@showBillDetailsList')->name('admin.billdetail.list');
+        });
     });
 });
 

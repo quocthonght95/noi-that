@@ -85,7 +85,7 @@ class CartController extends Controller
     public function postOrder(CustomerRequest $request, $id)
     {
         $content = Cart::content();
-        $total = round(Cart::total());
+        $total = Cart::total();
         if($total > 0){
             if($this->customer_repository->getById($id) == null) {
                 $data_customer = [
